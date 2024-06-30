@@ -7,3 +7,18 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+users = User.create([
+  { email: 'andres@gmail.com', password: 'password123' },
+  { email: 'maria@gmail.com', password: 'password123' },
+  { email: 'juan@gmail.com', password: 'password123' }
+])
+
+restaurants = [
+  { name: 'La Casa de Santiago', address: 'Calle Falsa 123, Santiago, Chile' },
+  { name: 'Sabor de Siempre', address: 'Avenida Siempre Viva 456, Santiago, Chile' },
+  { name: 'El Rincón de Ahumada', address: 'Paseo Ahumada 789, Santiago, Chile' }
+]
+
+restaurants.each do |restaurant_attrs|
+  Restaurant.create(restaurant_attrs)
+end
