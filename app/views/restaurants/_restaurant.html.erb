@@ -1,8 +1,9 @@
- <div class="col-4">
-    <div class="card">
-      <div class="card-text">
-        <h2 class="card-title"> <%= restaurant.name %></h2>
-        <p class="card-body"> <%= restaurant.address %></p>
-      </div>
+ <div class="container">
+   <div class="border p-1 mb-2">
+   <div class= "d-flex justificy-content-center align-item-center p-1">
+     <span class="me-auto"><%= restaurant.name %></span>
+      <%= link_to "Delete", restaurant_path(restaurant), data: {turbo_method: :delete}, class: "btn btn-danger me-2" %>
+      <%= link_to "Edit", edit_restaurant_path(restaurant), class: "btn btn-warning" %>
     </div>
-  </div>
+   </div>
+ </div>
